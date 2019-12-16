@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/account_layout"
+        android:layout_width="200dp"
+        android:theme="@style/input_text_style"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/account_edit"
+            android:hint="@string/account"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/account_layout"
+        android:id="@+id/password_layout"
+        android:layout_width="200dp"
+        app:hintTextAppearance="@style/input_text_hint_style"
+        app:errorTextAppearance="@style/input_text_error_style"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/password_edit"
+            android:hint="@string/password"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_below="@id/password_layout"
+        android:text="@string/login"
+        android:id="@+id/login_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
